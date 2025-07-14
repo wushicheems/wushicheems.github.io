@@ -17,13 +17,14 @@
             align-items: center;
         }
         
-        #video-background {
+        #gif-background {
             position: fixed;
             right: 0;
             bottom: 0;
             min-width: 100%;
             min-height: 100%;
             z-index: -1;
+            object-fit: cover;
         }
         
         .header {
@@ -89,10 +90,7 @@
     </style>
 </head>
 <body>
-    <video id="video-background" autoplay muted loop>
-        <source src="movie.mp4" type="video/mp4">
-        您的浏览器不支持视频标签。
-    </video>
+    <img id="gif-background" src="video.gif" alt="背景动画">
     
     <div class="header">
         <img src="logo.png" alt="武士芝士 Logo" class="logo">
@@ -100,18 +98,11 @@
     </div>
     
     <div class="buttons">
+        <a href="https://wushicheems.github.io/blog" class="btn">个人博客</a>
         <a href="https://wushicheems.github.io/snake" class="btn">梦开始的地方：贪吃蛇</a>
         <a href="/oj/hoj-vue/pages/index.html" class="btn">OJ测评</a>
     </div>
     
     <div class="contact">手机/微信：18372735812</div>
-
-    <script>
-        // 确保视频在页面加载后自动播放（某些浏览器需要）
-        document.addEventListener('DOMContentLoaded', function() {
-            const video = document.getElementById('video-background');
-            video.play().catch(e => console.log("自动播放被阻止:", e));
-        });
-    </script>
 </body>
 </html>
