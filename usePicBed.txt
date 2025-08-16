@@ -1,1 +1,1 @@
-logo.png作为blog的logo和图片,1这个文件夹作为图床
+logo.png作为blog的logo和图片,1这个文件夹作为blog的图床
